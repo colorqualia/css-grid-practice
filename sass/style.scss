@@ -1,0 +1,57 @@
+// #############################################################################
+// CSS Grid Practice
+// ｷﾀ━━ﾟ+.ヽ(≧▽≦)ﾉ.+ﾟ━━ ｯ !
+// #############################################################################
+
+@mixin clearfix {
+  &:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+.l-wrap {
+  @include clearfix;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1140px;
+  background: cyan;
+}
+
+.box {
+  @include clearfix;
+  float: left;
+  width: calc((100% - 20px * 12 ) / 12);
+  background: rgba(255, 240, 0, .5);
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 1rem;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.grid-items {
+  padding-right: 10px;
+  padding-left: 10px;
+  float: left
+}
+
+.main {
+  width: percentage(8/12);
+  background: royalblue;
+}
+
+.sidebar {
+  width: percentage(4/12);
+  background: pink;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f2f2f2;
+}
